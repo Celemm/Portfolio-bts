@@ -34,7 +34,7 @@ Ce portfolio a été conçu pour mettre en avant mes projets, mes compétences e
 2. Ouvrez `index.html` dans votre navigateur.
 
 ## 📞 Contact
-Si vous souhaitez me contacter, retrouvez-moi sur [LinkedIn](https://www.linkedin.com/) ou via mon email : example@email.com.
+Si vous souhaitez me contacter, retrouvez-moi sur [LinkedIn](https://www.linkedin.com/in/ngola-celeste-0b1191333/) ou via mon email : ngolaceleste@gmail.com
 
 ---
 ⭐ N'hésitez pas à laisser un star ⭐ sur le dépôt si vous aimez mon travail !
