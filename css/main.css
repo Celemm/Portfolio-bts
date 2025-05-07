@@ -66,7 +66,7 @@ main {
     padding: 2rem;
 }
 .portfolio-images img {
-    width: 25rem;
+    width: 33rem;
     height: 20rem;
     object-fit: cover;
     border-radius: 10px;
@@ -77,29 +77,39 @@ main {
 .portfolio-images ul {
     display: flex;
     justify-content: center;
-    gap: 2rem;
+    gap: 5rem;
     flex-wrap: wrap;
     list-style: none;
     padding: 0;
-    margin: 2rem 0;
+    margin: 3rem 0;
 }
-
 .portfolio-images figure {
     text-align: center;
-    max-width: 30rem;
+    position: relative; /* Permet de positionner l'élément figcaption par rapport à l'image */
 }
 
-figcaption a{
+figcaption {
+    position: absolute; /* Positionne le figcaption par rapport à son conteneur */
+    top: 296px; /* Laisse un peu d'espace en bas de l'image */
+    left: 50%; /* Centre le figcaption horizontalement */
+    transform: translateX(-50%); /* Corrige le décalage de la largeur du figcaption pour le centrer exactement */
+    width: 80%; /* Définit la largeur du figcaption pour qu'il soit plus petit que l'image */
+    text-align: center; /* Centre le texte à l'intérieur du figcaption */
+}
+
+figcaption a {
     display: block;
     width: 100%;
-    background-color: #3F51B5;
+    background-color: var(--buttoon-color);
     font-size: 1.2rem;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.6s ease-in-out;
     color: #fff;
-    padding: 1rem;
-    margin-top: 0.5rem;
-    border-radius: .5rem;
-    transition: all 0.4s ease-in-out;
 }
+
 figcaption a:hover {
     background-color: var(--buttoon-color2);
     color: #fff;
@@ -117,9 +127,20 @@ article {
     margin: 2rem auto;
     padding: 2rem;
     width: fit-content;
-    transform: skew(-10deg);
+    
     color: var(--text-color);
 }
+.fade-in-section {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.fade-in-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 article h2 {
     background: linear-gradient(to right, #8C52FF, #5CE1E6);
@@ -139,7 +160,7 @@ article p {
 article h2,
 article p,
 .button-default {
-    transform: skew(10deg);
+   
 }
 
 .button-container {
@@ -178,11 +199,11 @@ article p,
 .button-theme-info:hover{
 
     background-color: var(--buttoon-color);
-    transform: skew(10deg);
+
 }
 .button-theme-infos:hover {
     background-color: var(--buttoon-color2);
-    transform: skew(10deg);
+ 
 }
 
 footer {
