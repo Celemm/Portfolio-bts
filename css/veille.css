@@ -1,0 +1,241 @@
+@import url(./reset.css);
+
+:root {
+    --bg-color: #D0D9FF;
+    --button-color: #A76BE2;
+    --button-color2: white;
+    --text-color: #fff;
+    --text-color2: #000000;
+    --bg-color2: linear-gradient(to right, #5170FF, #FF66C4);
+}
+
+body {
+    background-color: var(--text-color);
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.2rem;
+    background: transparent;
+    color: #fff;
+    border: none;
+}
+
+header h1 {
+    font-size: 2rem;
+    text-transform: uppercase;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+    filter: drop-shadow(0 0 0.1rem rgba(0, 0, 0, 0.3));
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    font-size: 1rem;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 0.8rem;
+    backdrop-filter: blur(10px);
+}
+
+nav ul li {
+    width: 8.5rem;
+    line-height: 2.5rem;
+    text-align: center;
+    border-radius: 0.8rem;
+    transition: all 0.4s ease-in-out;
+}
+
+nav ul li a {
+    display: block;
+    font-size: 1rem;
+    font-weight: 400;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    transition: color 0.1s ease-in-out;
+}
+
+nav ul li:hover a {
+    color: rgb(93, 89, 89);
+}
+
+main {
+    padding: 0;
+}
+
+/* Hero Banner avec titre superposé */
+.hero-banner {
+    position: relative;
+    width: 100%;
+    height: 600px;
+    overflow: hidden;
+}
+
+.hero-banner img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.5);
+}
+
+.hero-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: white;
+    z-index: 10;
+    width: 90%;
+    max-width: 1000px;
+}
+
+.hero-title h1 {
+    font-size: 5rem;
+    font-weight: 700;
+    margin: 0;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    animation: fadeInUp 1s ease-out;
+}
+
+.hero-title p {
+    font-size: 1.8rem;
+    margin: 1.5rem 0 0 0;
+    font-weight: 300;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    animation: fadeInUp 1.2s ease-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Section de contenu */
+.content-section {
+    margin: 4rem auto;
+    padding: 2rem;
+    max-width: 1200px;
+}
+
+.content-section h2 {
+    font-size: 3rem;
+    color: var(--text-color2);
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+.content-wrapper {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    margin-bottom: 3rem;
+    flex-wrap: wrap;
+}
+
+.content-image {
+    width: 350px;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.content-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.content-text p {
+    color: var(--text-color2);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.button-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    margin: 3rem auto;
+    flex-wrap: wrap;
+}
+
+.button-default {
+    background-color: var(--button-color);
+    font-size: 1.2rem;
+    padding: 1rem 2.5rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    color: var(--text-color);
+    min-width: 180px;
+    text-align: center;
+}
+
+.button-default:hover {
+    background-color: var(--button-color2);
+    color: #000;
+    border: 1px solid var(--button-color);
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+footer {
+    text-align: center;
+    padding: 2rem 0;
+    font-weight: 600;
+    color: var(--text-color2);
+    background-color: #f5f5f5;
+    margin-top: 4rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .hero-title h1 {
+        font-size: 3rem;
+    }
+    
+    .hero-title p {
+        font-size: 1.3rem;
+    }
+    
+    .content-section h2 {
+        font-size: 2rem;
+    }
+    
+    .content-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .content-image {
+        width: 100%;
+        max-width: 400px;
+    }
+}

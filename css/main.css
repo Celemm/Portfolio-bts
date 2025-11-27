@@ -1,84 +1,83 @@
 @import url(./reset.css);
 
 :root {
-    --bg-color: 2.125rem; /* 34px */
-    --buttoon-color: 4.29rem; /* 69px */
-    --buttoon-color2: 1.75rem; /* 28px */
-    --text-color: 2.08rem; /* 33px */
+    --bg-color: #D0D9FF;
+    --button-color: #A76BE2;
+    --button-color2: white;
+    --text-color: #fff;
+    --text-color2: #000000;
     --bg-color2: linear-gradient(to right, #5170FF, #FF66C4);
 }
 
 body {
-    background-color: #D0D9FF;
+    background-color: var(--text-color);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
 }
 
-/* Header */
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 1.2rem;
-    background: var(--bg-color2);
+    background: var(--text-color);
     color: #fff;
+    border: 1px solid #eee;
 }
 
 header h1 {
-    font-size: 3rem;
+    font-size: 2rem;
     text-transform: uppercase;
+    color: black;
 }
 
 nav ul {
     display: flex;
-    gap: 1.6rem; /* 25px */
     list-style: none;
+    gap: 1rem;
     margin: 0;
     padding: 0;
+    filter: drop-shadow(0 0 0.1rem #ececff);
+    border: 1px solid #eee;
+    font-size: 1rem;
+    background-color: #ffffff;
+    border-radius: 0.8rem;
 }
 
 nav ul li {
-    width: 10rem;
-    line-height: 4.5rem;
+    width: 8.5rem;
+    line-height: 3rem;
     text-align: center;
-    border-radius: 8rem;
+    border-radius: 0.8rem;
     transition: all 0.4s ease-in-out;
-}
-
-nav ul li:hover {
-    background-color: white;
-    cursor: pointer;
-    filter: drop-shadow(0 0 0.1rem #5a5a5b);
-    transform: scale(1.05);
 }
 
 nav ul li a {
     display: block;
-    font-size: 1.2rem;
-    color: white;
+    font-size: 1rem;
+    color: rgb(0, 0, 0);
     text-decoration: none;
-    font-weight: 600;
-    transition: color 0.4s ease-in-out;
+    font-weight: 500;
+    transition: color 0.1s ease-in-out;
 }
 
 nav ul li:hover a {
-    color: black;
+    color: rgb(93, 89, 89);
 }
 
-/* Main */
 main {
     padding: 2rem;
 }
 
-/* Portfolio Images */
 .portfolio-images img {
-    width: 33rem;
+    width: 28rem;
     height: 20rem;
     object-fit: cover;
-    border-radius: 10px;
-    box-shadow: 0 0 0.5rem #a6a6a6;
+    border-radius: 0.8rem;
+    filter: drop-shadow(0 0 0.1rem #d6d6e2);
     display: block;
+    border: 1px solid #eee;
 }
 
 .portfolio-images ul {
@@ -108,28 +107,25 @@ figcaption {
 figcaption a {
     display: block;
     width: 100%;
-    background-color:#A76BE2;
+    background-color: #A76BE2;
     font-size: 1.2rem;
     padding: 1rem 2rem;
     border: none;
-    border-radius: 5px;
+    border-radius: 0.8rem;
     cursor: pointer;
-    transition: all 0.6s ease-in-out;
+    transition: all 0.1s ease-in-out;
     color: #fff;
+    text-decoration: none;
 }
 
 figcaption a:hover {
-    background-color: white;
-    color: black;
-    transform: scale(1.05);
-    border-radius: 8rem;
-    filter: drop-shadow(0 0 0.1rem #5a5a5b);
+    background-color: #ac7cdc;
+    color: #fff;
 }
 
-/* Fade in animation */
 .fade-in-section {
     opacity: 0;
-    transform: translateY(1.875rem); /* 30px */
+    transform: translateY(1.875rem);
     transition: opacity 1s ease-out, transform 1s ease-out;
 }
 
@@ -138,15 +134,16 @@ figcaption a:hover {
     transform: translateY(0);
 }
 
-/* Article Section */
 article {
     margin: 2rem auto;
     padding: 2rem;
     max-width: 90rem;
     color: var(--text-color);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
-/* Conteneur du texte et de l'image */
 .article-content {
     display: flex;
     align-items: flex-start;
@@ -154,35 +151,35 @@ article {
     flex-wrap: wrap;
 }
 
-/* L'image dans l'article */
 .article-image {
-    width: 18.75rem; /* 300px */
+    width: 18.75rem;
     height: auto;
     border-radius: 10px;
     object-fit: cover;
     flex-shrink: 0;
 }
 
-/* Le texte de l'article */
 .article-text {
     flex: 1;
-    min-width: 18.75rem; /* 300px */
+    min-width: 18.75rem;
 }
 
 .article-text p {
-    color: var(--text-color);
+    color: var(--text-color2);
     text-align: left;
     font-size: 1.5rem;
+    display: block;
+    justify-content: center;
     line-height: 1.6;
     padding: 1.5rem;
+    text-align: center;
     margin-bottom: 1rem;
-    max-width: 50rem; /* 640px */
+    max-width: 50rem;
     width: 100%;
     box-sizing: border-box;
 }
 
 article h2 {
-    
     font-size: 4rem;
     background: none;
     padding: 0;
@@ -191,52 +188,69 @@ article h2 {
     text-align: left;
 }
 
-/* Buttons */
 .button-container {
     display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    margin: 2rem auto;
+    position: relative;
+    max-width: 600px;
 }
 
 .button-default {
-    background-color: var(--buttoon-color);
+    background-color: var(--button-color);
     font-size: 1.2rem;
-    padding: 1rem 2rem;
+    padding: 1rem 2.5rem;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     transition: all 0.6s ease-in-out;
-    color: #fff;
+    color: var(--text-color);
+    min-width: 120px;
+    text-align: center;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .button-default:hover {
-    background-color: var(--buttoon-color2);
-    color: #fff;
+    background-color: var(--button-color2);
+    color: #000;
+    border: 1px solid #eee;
     transform: scale(1.05);
-    border-radius: 8rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.button-cv {
+    margin-right: 1rem;
+}
+
+.button-github {
+    margin-left: 1rem;
 }
 
 .button-theme-infos {
-    background-color:#A76BE2;
+    background-color: var(--button-color);
 }
 
 .button-theme-info {
-    background-color:#A76BE2 ;
+    background-color: var(--button-color);
 }
 
 .button-theme-info:hover {
+    border: 1px solid #eee;
     background-color: white;
     color: black;
-    border: .1rem solid black;
 }
 
 .button-theme-infos:hover {
+    border: 1px solid #eee;
     background-color: white;
     color: black;
-    border: .1rem solid black;
 }
 
-/* Footer */
 footer {
     text-align: center;
     padding: 1.5rem 0;
