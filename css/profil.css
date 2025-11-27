@@ -1,0 +1,131 @@
+/* profil.css - Styles pour la page profil */
+
+/* Section principale */
+.profil-section {
+    max-width: 1400px;
+    margin: 6rem auto 4rem;
+    padding: 2rem;
+}
+
+.profil-section h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #000;
+    margin-bottom: 3rem;
+    text-align: center;
+}
+
+/* Container du contenu */
+.profil-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+/* Image à gauche */
+.profil-image {
+    flex-shrink: 0;
+    width: 360px;
+}
+
+.profil-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Texte à droite */
+.profil-text {
+    flex: 1;
+    min-width: 300px;
+}
+
+.profil-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+.profil-text p:last-child {
+    margin-bottom: 0;
+}
+
+/* Boutons en bas */
+.profil-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.profil-buttons .button-default {
+    background-color: #A76BE2;
+    color: white;
+    font-size: 1.1rem;
+    padding: 0.9rem 2.5rem;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 180px;
+}
+
+.profil-buttons .button-default:hover {
+    background-color: #9558d4;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(167, 107, 226, 0.3);
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+    .profil-content {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .profil-image {
+        width: 100%;
+        max-width: 500px;
+    }
+    
+    .profil-text {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .profil-section {
+        margin: 4rem auto 2rem;
+        padding: 1.5rem;
+    }
+    
+    .profil-section h2 {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .profil-content {
+        gap: 2rem;
+    }
+    
+    .profil-text p {
+        font-size: 1rem;
+        line-height: 1.7;
+    }
+    
+    .profil-buttons {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+    
+    .profil-buttons .button-default {
+        width: 100%;
+        max-width: 300px;
+    }
+}
