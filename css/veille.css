@@ -140,18 +140,19 @@ main {
     max-width: 1200px;
 }
 
-.content-section h2 {
+.content-section > h2 {
     font-size: 3rem;
     color: var(--text-color2);
     margin-bottom: 3rem;
     text-align: center;
 }
 
+/* Premier bloc avec image à gauche */
 .content-wrapper {
     display: flex;
     align-items: flex-start;
     gap: 3rem;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
     flex-wrap: wrap;
 }
 
@@ -161,6 +162,7 @@ main {
     border-radius: 10px;
     object-fit: cover;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    flex-shrink: 0;
 }
 
 .content-text {
@@ -173,6 +175,27 @@ main {
     font-size: 1.2rem;
     line-height: 1.8;
     margin-bottom: 1.5rem;
+    text-align: justify;
+}
+
+/* Sections suivantes en pleine largeur */
+.full-width-content {
+    width: 100%;
+    margin-top: 3rem;
+}
+
+.full-width-content h2 {
+    font-size: 2.2rem;
+    color: var(--text-color2);
+    margin-top: 3rem;
+    margin-bottom: 1.5rem;
+}
+
+.full-width-content p {
+    color: var(--text-color2);
+    font-size: 1.2rem;
+    line-height: 1.8;
+    margin-bottom: 2rem;
     text-align: justify;
 }
 
@@ -225,7 +248,7 @@ footer {
         font-size: 1.3rem;
     }
     
-    .content-section h2 {
+    .content-section > h2 {
         font-size: 2rem;
     }
     
@@ -237,5 +260,13 @@ footer {
     .content-image {
         width: 100%;
         max-width: 400px;
+    }
+
+    .full-width-content h2 {
+        font-size: 1.8rem;
+    }
+
+    .full-width-content p {
+        font-size: 1.1rem;
     }
 }

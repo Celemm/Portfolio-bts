@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Portfolio de développement web de Celeste. Découvrez mes projets et compétences en développement.">
+    <title>Portfolio Développement</title>
+      <link rel="stylesheet" href="./css/main.css">
+    <link rel="stylesheet" href="./css/projetSchool.css">
+    <link rel="stylesheet" href="./css/dark-mode.css">
+</head>
+
+<body>
+
+   
+     <main>
+        <!-- Fil d'Ariane -->
+        <div class="breadcrumb fade-in-section">
+            <a href="index.html">Accueil</a> / 
+            <a href="développement.html">Développement</a> / 
+            <span>Personnel</span>
+        </div>
+
+        <!-- Section Hero -->
+        <section class="hero-project fade-in-section">
+            <div class="hero-info">
+                <h2>Personnel - Gestionnaire d'employés M2L</h2>
+                <div class="tech-stack">
+                    <img src="./asset/image.png" alt="Java" title="Java">
+                    <img src="./asset/sql.svg" alt="MySQL" title="MySQL">
+                </div>
+                <div class="project-links">
+                    <a href="https://github.com/Tinx242/Personnel" target="_blank" class="btn-primary">
+                        <span>📂</span>
+                        Code Source
+                    </a>
+                    <a href="https://enseignement.alexandre-mesle.com/PPE/personnel/javadoc/personnel/package-summary.html" target="_blank" class="btn-secondary">
+                        <span>📄</span>
+                        Documentation
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Contexte -->
+        <section class="context fade-in-section">
+            <h3>🎯 Contexte du projet</h3>
+            <p>
+                Ce projet a été réalisé dans le cadre de la gestion des employés de la Maison des Ligues de Lorraine (M2L). 
+                L'objectif était de transformer une application mono-utilisateur en ligne de commande en un système multi-utilisateurs 
+                avec différents niveaux d'habilitation.
+            </p>
+        </section>
+
+        <!-- Section Ressources -->
+        <section class="resources fade-in-section">
+            <h3>📦 Ressources fournies</h3>
+            <ul>
+                <li><strong>Code source initial</strong> : Application Java configurée pour Eclipse avec architecture 3-tiers</li>
+                <li><strong>Documentation</strong> : Spécifications techniques et fonctionnelles</li>
+                <li><strong>Bibliothèque CLI</strong> : Outil de dialogue en ligne de commande</li>
+                <li><strong>Architecture existante</strong> : Structure 3-tiers à conserver (Présentation, Métier, Données)</li>
+            </ul>
+        </section>
+
+        <!-- Section Réalisations -->
+        <section class="achievements fade-in-section">
+            <h3>✨ Réalisations et développements</h3>
+            
+            <div class="achievement-item">
+                <h4>1. Migration vers une base de données MySQL</h4>
+                <p>
+                    Transformation de l'application mono-utilisateur en système multi-utilisateurs grâce à l'implémentation 
+                    d'une base de données relationnelle. Cette migration a permis la gestion simultanée de plusieurs utilisateurs 
+                    et la persistance des données.
+                </p>
+            </div>
+
+            <div class="achievement-item">
+                <h4>2. Système d'authentification et d'habilitation</h4>
+                <p>Mise en place de trois niveaux d'accès distincts :</p>
+                <ul>
+                    <li><strong>Employé simple</strong> : Accès en lecture seule (consultation de l'annuaire)</li>
+                    <li><strong>Administrateur de ligue</strong> : Gestion des employés de sa propre ligue via application bureau</li>
+                    <li><strong>Super-administrateur</strong> : Accès total + gestion des comptes administrateurs via CLI</li>
+                </ul>
+            </div>
+
+            <div class="achievement-item">
+                <h4>3. Respect de l'architecture 3-tiers</h4>
+                <p>
+                    Conservation et amélioration de l'architecture applicative existante en séparant clairement 
+                    les couches Présentation, Métier et Accès aux données, garantissant ainsi la maintenabilité 
+                    et l'évolutivité du système.
+                </p>
+            </div>
+        </section>
+
+        <!-- Section Captures d'écran -->
+        <section class="screenshots fade-in-section">
+            <h3>📸 Captures d'écran</h3>
+            <div class="screenshot-grid">
+                <div class="screenshot-item">
+                    <img src="./asset/image1.png" alt="Écran de connexion" onerror="this.style.display='none'">
+                    <p>Interface de connexion</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="./asset/image2.png" alt="Interface administrateur" onerror="this.style.display='none'">
+                    <p>Structuration du projet</p>
+                </div>
+                <div class="screenshot-item">
+                    <img src="./asset/image3.png" alt="Liste des employés" onerror="this.style.display='none'">
+                    <p>Gestion des employés</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section MCD -->
+        <section class="database fade-in-section">
+            <h3>🗄️ Modèle Conceptuel de Données (MCD)</h3>
+            <div class="mcd-container">
+                <img src="./asset/mcd.png" alt="MCD du projet Personnel" onerror="this.style.display='none'">
+                <div class="mcd-description">
+                    <h4>Entités principales :</h4>
+                    <ul>
+                        <li><strong>EMPLOYE</strong> : Informations détaillées des employés, Niveaux d'habilitation (Employé, Admin, Super-admin)</li>
+                        <li><strong>LIGUE</strong> : Organisation des ligues</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Technologies -->
+        <section class="technologies fade-in-section">
+            <h3>🛠️ Technologies utilisées</h3>
+            <div class="tech-list">
+                <div class="tech-item">
+                    <img src="./asset/java.svg" alt="Java">
+                    <h4>Java</h4>
+                    <p>Langage principal pour la logique métier et l'architecture 3-tiers</p>
+                </div>
+                <div class="tech-item">
+                    <img src="./asset/mysql.svg" alt="MySQL">
+                    <h4>MySQL</h4>
+                    <p>Base de données relationnelle pour la persistance multi-utilisateurs</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section Défis -->
+        <section class="challenges fade-in-section">
+            <h3>🚀 Défis relevés</h3>
+            <ul>
+                <li>Migration d'une architecture mono-utilisateur vers multi-utilisateurs</li>
+                <li>Implémentation d'un système de permissions granulaire</li>
+                <li>Respect strict de l'architecture 3-tiers existante</li>
+                <li>Gestion de la sécurité et de l'authentification</li>
+                <li>Compatibilité entre interface CLI et interface bureau</li>
+            </ul>
+        </section>
+
+        <!-- Navigation Retour -->
+        <div class="back-navigation fade-in-section">
+            <a href="développement.html" class="btn-back">
+                ← Retour aux projets
+            </a>
+        </div>
+    </main>
+
+    <footer>
+        &copy; Portfolio - Celeste - <time datetime="2025">2025</time>
+    </footer>
+    <script src="./js/app.js"></script>
+      <script src="./js/header.js"></script>
+      <script src="./js/dark-mode.js"></script>
+</body>
+
+</html>
