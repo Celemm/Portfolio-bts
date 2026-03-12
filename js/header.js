@@ -19,6 +19,7 @@ const headerHTML = `
         </ul>
     </nav>
 </header>
+
 `;
 
 // Insère le header au début de chaque page

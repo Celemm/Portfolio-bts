@@ -6,53 +6,154 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Portfolio de développement web de Celeste. Découvrez mes projets et compétences en développement.">
     <title>Profil - Celeste Portfolio</title>
-    <link rel="stylesheet" href="./css/main.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/profil.css">
+        <link rel="stylesheet" href="./css/main.css">
     <link rel="stylesheet" href="./css/dark-mode.css">
+      <link rel="stylesheet" href="./css/header.css">
 </head>
 
 <body>
+
     <main>
-        <!-- Section Profil -->
+
+        <!-- SECTION PROFIL -->
         <section class="profil-section">
-            <h2>PLUS D'INFOS SUR MON TRAVAIL</h2>
-            
+            <span class="section-label">À propos</span>
+            <h2>Qui suis-je ?</h2>
+
             <div class="profil-content">
+
                 <div class="profil-image">
-                    <img src="./asset/cover8.png" alt="Image descriptive">
+                    <img src="./asset/Profil.png" alt="Photo de Gloire Céleste Ngola">
                 </div>
-                
+
                 <div class="profil-text">
                     <p>
-                        Salut, moi c'est <strong>Gloire Céleste Ngola</strong>.<br>
-                        Je suis actuellement étudiant à <strong>ITIC Paris</strong> en première année de <strong>BTS SIO</strong>,
-                        option <strong>SLAM</strong>, spécialisée dans le développement. <br>
-                        Je suis encore en cours d'apprentissage et je vous propose ce portfolio
-                        où vous trouverez mes différentes études et projets que j'ai entrepris
-                        dans ma carrière.<br>
-                        Vous trouverez ci-dessous mon <strong>CV</strong> ainsi que le lien vers mon <strong>GitHub</strong>.
+                        Je m'appelle <strong>Gloire Céleste Ngola</strong>, étudiant en
+                        <strong>BTS SIO option SLAM</strong> à ITIC Paris.
                     </p>
+                    <p>
+                        Passionné par le développement web, je maîtrise plusieurs langages
+                        et frameworks modernes. J'aime créer des interfaces soignées et
+                        des applications fonctionnelles qui répondent aux besoins des utilisateurs.
+                    </p>
+                    <p>
+                        En dehors du code, je m'intéresse à l'UI/UX design et je cherche
+                        constamment à améliorer mes compétences techniques à travers des projets
+                        personnels et académiques.
+                    </p>
+
+                    <div class="profil-meta">
+                        <div class="meta-item">
+                            <span class="meta-label">Localisation</span>
+                            <span class="meta-value">Paris, France</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">Formation</span>
+                            <span class="meta-value">BTS SIO SLAM</span>
+                        </div>
+                        <div class="meta-item">
+                            <span class="meta-label">École</span>
+                            <span class="meta-value">ITIC Paris</span>
+                        </div>
+                    </div>
+
+                    <hr class="profil-divider">
+
+                    <div class="profil-buttons">
+                        <a href="/docs/monCv.pdf" download class="btn btn-primary">
+                            📄 Mon CV
+                        </a>
+                        <a href="https://github.com/Celemm" target="_blank" class="btn btn-outline">
+                            🐙 GitHub
+                        </a>
+                    </div>
                 </div>
-            </div>
-            
-            <div class="profil-buttons">
-                <a href="/docs/monCv.pdf" download>
-                    <button class="button-default button-theme-infos" type="button">Mon CV</button>
-                </a>
-                <a href="https://github.com/Celemm">
-                    <button class="button-default button-theme-info" type="button">GitHub</button>
-                </a>
+
             </div>
         </section>
+
+
+        <!-- SECTION PARCOURS -->
+        <section class="parcours-section">
+            <h3>Formation</h3>
+            <h2>Mon Parcours Scolaire et mes expériences</h2>
+
+            <ul class="parcours-list">
+                <li>
+                    <figure>
+                        <img src="./asset/itic.jpg" alt="ITIC Paris">
+                        <div class="parcours-info">
+                            <div class="parcours-date">2024 — 2026</div>
+                            <div class="parcours-title">ITIC Paris</div>
+                            <div class="parcours-desc">BTS SIO option SLAM — HTML/CSS, PHP, Java, JavaScript, SQL.</div>
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="./asset/experience.jpg" alt="Expérience professionnelle">
+                        <div class="parcours-info">
+                            <div class="parcours-date">mai 2025 — juin 2025</div>
+                            <div class="parcours-title">Stage Développeur Web</div>
+                            <div class="parcours-desc">Développement d'applications Java avec android Studio.</div>
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="./asset/experience.jpg" alt="Expérience professionnelle">
+                        <div class="parcours-info">
+                            <div class="parcours-date">novembre 2025 — décembre 2025</div>
+                            <div class="parcours-title">Stage Développeur Web</div>
+                            <div class="parcours-desc">Développement d'un site web avec HTML, CSS et JavaScript pour l'entreprise DOOKE Corporation.</div>
+                        </div>
+                    </figure>
+                </li>
+                <li>
+                    <figure>
+                        <img src="./asset/fiche_synthese.png" alt="Expérience professionnelle">
+                        <div class="parcours-info">
+                            <div class="parcours-date">2025 — 2026</div>
+                            <div class="parcours-title">Fiche de sythèse</div>
+                             <a href="/docs/monCv.pdf" download class="btn btn-primary">📄 Télécharger</a>
+                            <div class="parcours-desc">Développement d'une application de gestion de stock avec PHP et MySQL pour l'entreprise DOOKE Corporation.</div>
+                        </div>
+                    </figure>
+                </li>
+                <!-- Ajoute d'autres étapes ici si besoin -->
+            </ul>
+        </section>
+
+       <!-- SECTION COMPÉTENCES -->
+<section class="competences-section">
+    <h3>Technologies</h3>
+    <h2>Mes Compétences</h2>
+    <ul>
+        <li><img src="./asset/html5-original.svg" alt="HTML5"></li>
+        <li><img src="./asset/css3-original.svg" alt="CSS3"></li>
+        <li><img src="./asset/javascript.svg" alt="JavaScript"></li>
+        <li><img src="./asset/php-original.svg" alt="PHP"></li>
+        <li><img src="./asset/mysql-original.svg" alt="MySQL"></li>
+        <li><img src="./asset/androidstudio-original.svg" alt="Android Studio"></li>
+            <li><img src="./asset/Vmware.png" alt="VmWare"></li>
+            <li><img src="./asset/vscode-original.svg" alt="Visual Studio"></li>
+    </ul>
+</section>
+    
+
     </main>
 
     <footer>
-        &copy; Portfolio - Celeste - <time datetime="2025">2025</time>
+        &copy; Portfolio — Celeste — <time datetime="2025">2025</time>
     </footer>
 
     <script src="./js/app.js"></script>
     <script src="./js/header.js"></script>
     <script src="./js/dark-mode.js"></script>
-</body>
 
+</body>
 </html>

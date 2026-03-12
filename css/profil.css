@@ -1,131 +1,395 @@
-/* profil.css - Styles pour la page profil */
+/* =====================
+   RESET & BASE
+===================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
-/* Section principale */
+:root {
+    --accent: #A76BE2;
+    --accent-hover: #9558d4;
+    --bg: #ffffff;
+    --bg-soft: #f8f8f8;
+    --bg-card: #fafafa;
+    --border: #e8e8e8;
+    --text: #1a1a1a;
+    --text-muted: #555;
+    --text-light: #888;
+    --radius: 12px;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+
+/* =====================
+   MAIN
+===================== */
+main {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 7rem 2rem 4rem;
+}
+
+/* =====================
+   SECTION PROFIL
+===================== */
 .profil-section {
-    max-width: 1400px;
-    margin: 6rem auto 4rem;
-    padding: 2rem;
+    margin-bottom: 6rem;
+}
+
+.section-label {
+    display: inline-block;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.8rem;
 }
 
 .profil-section h2 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     font-weight: 700;
-    color: #000;
+    color: var(--text);
     margin-bottom: 3rem;
-    text-align: center;
+    line-height: 1.2;
 }
 
-/* Container du contenu */
 .profil-content {
     display: flex;
     align-items: flex-start;
-    gap: 3rem;
-    margin-bottom: 3rem;
+    gap: 3.5rem;
 }
 
-/* Image à gauche */
+/* Image */
 .profil-image {
     flex-shrink: 0;
-    width: 360px;
+    width: 280px;
 }
 
 .profil-image img {
     width: 100%;
-    height: auto;
-    border-radius: 10px;
+    height: 320px;
     object-fit: cover;
+    border-radius: var(--radius);
     display: block;
 }
 
-/* Texte à droite */
+/* Carte texte */
 .profil-text {
     flex: 1;
-    min-width: 300px;
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 2.5rem;
 }
 
 .profil-text p {
-    font-size: 1.1rem;
-    line-height: 1.8;
-    color: #333;
-    margin-bottom: 1.5rem;
-    text-align: justify;
+    font-size: 1rem;
+    line-height: 1.85;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
 }
 
-.profil-text p:last-child {
+.profil-text p:last-of-type {
     margin-bottom: 0;
 }
 
-/* Boutons en bas */
+.profil-text strong {
+    color: var(--text);
+    font-weight: 600;
+}
+
+/* Séparateur */
+.profil-divider {
+    border: none;
+    border-top: 1px solid var(--border);
+    margin: 2rem 0;
+}
+
+/* Boutons */
 .profil-buttons {
     display: flex;
-    justify-content: center;
-    gap: 2rem;
-    margin-top: 3rem;
+    gap: 1rem;
+    flex-wrap: wrap;
 }
 
-.profil-buttons .button-default {
-    background-color: #A76BE2;
-    color: white;
-    font-size: 1.1rem;
-    padding: 0.9rem 2.5rem;
-    border: none;
+.btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.8rem;
     border-radius: 8px;
+    font-size: 0.95rem;
+    font-weight: 600;
     cursor: pointer;
-    transition: all 0.3s ease;
-    min-width: 180px;
+    text-decoration: none;
+    transition: all 0.25s ease;
+    border: none;
 }
 
-.profil-buttons .button-default:hover {
-    background-color: #9558d4;
+.btn-primary {
+    background-color: var(--accent);
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-hover);
     transform: translateY(-2px);
-    box-shadow: 0 4px 12px rgba(167, 107, 226, 0.3);
+    box-shadow: 0 6px 16px rgba(167, 107, 226, 0.3);
 }
 
-/* Responsive */
-@media (max-width: 1024px) {
+.btn-outline {
+    background: transparent;
+    color: var(--text);
+    border: 1.5px solid var(--border);
+}
+
+.btn-outline:hover {
+    border-color: var(--accent);
+    color: var(--accent);
+    transform: translateY(-2px);
+}
+
+/* Infos rapides */
+.profil-meta {
+    display: flex;
+    gap: 2rem;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+}
+
+.meta-item {
+    display: flex;
+    flex-direction: column;
+    gap: 0.2rem;
+}
+
+.meta-label {
+    font-size: 0.75rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-light);
+}
+
+.meta-value {
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text);
+}
+
+/* =====================
+   SECTION PARCOURS
+===================== */
+.parcours-section {
+    margin-bottom: 5rem;
+}
+
+.parcours-section h3 {
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 0.8rem;
+}
+
+.parcours-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 2.5rem;
+}
+
+.parcours-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.parcours-list li {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    overflow: hidden;
+    transition: box-shadow 0.25s ease;
+}
+
+.parcours-list li:hover {
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+   transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(167, 107, 226, 0.15);
+    border-color: var(--accent);
+}
+
+.parcours-list figure {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    padding: 1.8rem 2rem;
+}
+
+.parcours-list img {
+    width: 70px;
+    height: 70px;
+    object-fit: contain;
+    border-radius: 8px;
+    flex-shrink: 0;
+    background: white;
+    padding: 6px;
+    border: 1px solid var(--border);
+}
+
+.parcours-info {
+    flex: 1;
+}
+
+.parcours-date {
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--accent);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 0.3rem;
+}
+
+.parcours-title {
+    font-size: 1.05rem;
+    font-weight: 600;
+    color: var(--text);
+    margin-bottom: 0.3rem;
+}
+
+.parcours-desc {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+/* =====================
+   FOOTER
+===================== */
+footer {
+    text-align: center;
+    padding: 2rem;
+    font-size: 0.85rem;
+    color: var(--text-light);
+    border-top: 1px solid var(--border);
+}
+
+/* =====================
+   DARK MODE
+===================== */
+body.dark-mode {
+    --bg: #1a1a1a;
+    --bg-soft: #212121;
+    --bg-card: #242424;
+    --border: #333;
+    --text: #f0f0f0;
+    --text-muted: #aaa;
+    --text-light: #666;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-width: 900px) {
     .profil-content {
         flex-direction: column;
         align-items: center;
     }
-    
+
     .profil-image {
         width: 100%;
-        max-width: 500px;
+        max-width: 380px;
     }
-    
+
+    .profil-image img {
+        height: 280px;
+    }
+
     .profil-text {
         width: 100%;
     }
 }
 
 @media (max-width: 768px) {
-    .profil-section {
-        margin: 4rem auto 2rem;
-        padding: 1.5rem;
+    main {
+        padding: 5rem 1.5rem 3rem;
     }
-    
+
     .profil-section h2 {
         font-size: 2rem;
-        margin-bottom: 2rem;
     }
-    
-    .profil-content {
-        gap: 2rem;
+
+    .profil-text {
+        padding: 1.8rem;
     }
-    
-    .profil-text p {
-        font-size: 1rem;
-        line-height: 1.7;
-    }
-    
+
     .profil-buttons {
         flex-direction: column;
-        align-items: center;
+    }
+
+    .btn {
+        justify-content: center;
+    }
+
+    .parcours-list figure {
+        flex-direction: column;
+        text-align: center;
         gap: 1rem;
     }
-    
-    .profil-buttons .button-default {
+      .competences-section img {
         width: 100%;
-        max-width: 300px;
+        height: auto;
     }
+
+    .competences-section ul {
+        gap: 1.5rem;
+    }
+}
+ /* =====================
+   SECTION COMPÉTENCES
+===================== */
+
+/* À mettre HORS du @media, au même niveau que les autres sections */
+.competences-section ul {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.competences-section li {
+    background: var(--bg-card);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem 1.2rem;        /* ← réduit, était 2rem 1.5rem */
+    transition: box-shadow 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+}
+
+.competences-section li:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 24px rgba(167, 107, 226, 0.15);
+    border-color: var(--accent);
+}
+
+.competences-section img {
+    width: 64px;                 /* ← réduit, était 64px */
+    height: 64px;                /* ← réduit, était 64px */
+    object-fit: contain;         /* ← garde le logo entier sans le couper */
+    display: block;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.1));
 }
