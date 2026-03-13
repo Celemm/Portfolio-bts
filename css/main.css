@@ -1,7 +1,7 @@
 @import url(./reset.css);
 
 :root {
-    --bg-color: #D0D9FF;
+    --bg-color: #fffcfc;
     --button-color: #A76BE2;
     --button-color2: white;
     --text-color: #fff;
@@ -10,7 +10,7 @@
 }
 
 body {
-    background-color: var(--text-color);
+    background-color: var(--bg-color);
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
