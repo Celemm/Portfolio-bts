@@ -1,58 +1,80 @@
-const headerHTML = `
-<header>
-    <h1>Mon Portfolio</h1>
-    
-    <!-- Bouton burger pour mobile -->
-    <button class="burger-menu" aria-label="Menu de navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-    </button>
-    
-    <nav>
-        <ul class="nav-links">
-            <li><a href="index.html" class="nav-link">Accueil</a></li>
-            <li><a href="./profil.html" class="nav-link">Profil</a></li>
-            <li><a href="./contact.html" class="nav-link">Contact</a></li>
-            <li><a href="./projet.html" class="nav-link">Projets</a></li>
-            <li><a href="./veille.html" class="nav-link">Veille Techno</a></li>
-        </ul>
-    </nav>
-</header>
+/**
+ * header.js — Celeste Ngola
+ * Génère la navigation commune à toutes les pages.
+ * Le lien actif est détecté automatiquement d'après l'URL courante.
+ */
 
-`;
+(function () {
+  /* ── Liens de navigation ─────────────────────────────────── */
+  const navLinks = [
+    { label: 'Accueil', href: 'index.html' },
+    { label: 'Profil',  href: 'profil.html' },
+    { label: 'Projets', href: 'projet.html' },
+    { label: 'Veille',  href: 'veille-iot.html' },
+    { label: 'Contact', href: 'contact.html' },
+  ];
 
-// Insère le header au début de chaque page
-document.body.insertAdjacentHTML('afterbegin', headerHTML);
+  /* ── Détection de la page active ────────────────────────── */
+  const currentFile = window.location.pathname.split('/').pop() || 'index.html';
 
-// Active le menu burger après l'insertion du HTML
-document.addEventListener('DOMContentLoaded', () => {
-    const burger = document.querySelector('.burger-menu');
-    const navLinks = document.querySelector('nav');
-    
-    burger.addEventListener('click', () => {
-        navLinks.classList.toggle('active');
-        burger.classList.toggle('active');
-        document.body.classList.toggle('menu-open');
+  /* Pages qui appartiennent à la section Projets */
+  const projetsPages = ['projet.html', 'dev.html', 'res.html', 'projetSchool.html', 'projetSkystorm.html'];
+
+  function isActive(href) {
+    if (href === 'projet.html' && projetsPages.includes(currentFile)) return true;
+    return currentFile === href;
+  }
+
+  /* ── Construction du HTML ───────────────────────────────── */
+  const linksHTML = navLinks
+    .map(function (item) {
+      const active = isActive(item.href) ? ' class="active"' : '';
+      return '<a href="' + item.href + '"' + active + '>' + item.label + '</a>';
+    })
+    .join('\n      ');
+
+  const navHTML =
+    '<nav>' +
+    '<div class="logo">Portfolio</div>' +
+    '<button class="burger" id="burger" aria-label="Menu de navigation">' +
+    '<span></span><span></span><span></span>' +
+    '</button>' +
+    '<div class="nav-links" id="navLinks">' +
+    linksHTML +
+    '</div>' +
+    '</nav>';
+
+  /* ── Insertion avant tout le contenu du body ────────────── */
+  document.body.insertAdjacentHTML('afterbegin', navHTML);
+
+  /* ── Gestion du menu burger (mobile) ────────────────────── */
+  document.addEventListener('DOMContentLoaded', function () {
+    const burger   = document.getElementById('burger');
+    const navPanel = document.getElementById('navLinks');
+
+    if (!burger || !navPanel) return;
+
+    burger.addEventListener('click', function () {
+      navPanel.classList.toggle('open');
+      burger.classList.toggle('active');
     });
-    
-    // Ferme le menu quand on clique sur un lien
-    document.querySelectorAll('.nav-link').forEach(link => {
-        link.addEventListener('click', () => {
-            navLinks.classList.remove('active');
-            burger.classList.remove('active');
-            document.body.classList.remove('menu-open');
-        });
+
+    navPanel.querySelectorAll('a').forEach(function (link) {
+      link.addEventListener('click', function () {
+        navPanel.classList.remove('open');
+        burger.classList.remove('active');
+      });
     });
-    
-    // Ferme le menu si on clique sur l'overlay
-    document.addEventListener('click', (e) => {
-        if (document.body.classList.contains('menu-open') && 
-            !navLinks.contains(e.target) && 
-            !burger.contains(e.target)) {
-            navLinks.classList.remove('active');
-            burger.classList.remove('active');
-            document.body.classList.remove('menu-open');
-        }
+
+    document.addEventListener('click', function (e) {
+      if (
+        navPanel.classList.contains('open') &&
+        !navPanel.contains(e.target) &&
+        !burger.contains(e.target)
+      ) {
+        navPanel.classList.remove('open');
+        burger.classList.remove('active');
+      }
     });
-});
+  });
+})();

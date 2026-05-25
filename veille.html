@@ -1,85 +1,41 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio de développement web de Celeste. Découvrez mes projets et compétences en développement.">
-    <title>Veille Technologique - Eagle Eye</title>
-    <link rel="stylesheet" href="./css/veille.css">
-    <link rel="stylesheet" href="./css/dark-mode.css">
-    
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Veille Technologique — Celeste Ngola</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/veille.css">
 </head>
-
 <body>
-    <main>
-        <!-- Bannière avec image -->
-        <section class="hero-banner">
-            <img src="./asset/eagle.png" alt="Eagle Eye - Technologie militaire">
-            <div class="hero-title">
-                <h1>EAGLE EYE</h1>
-                <p>L'introduction de l'IA et de la réalité augmentée dans l'armée</p>
-            </div>
-        </section>
 
-        <!-- Contenu principal -->
-        <article class="content-section">
-            <!-- Section 1 avec image à gauche -->
-            <h2>Qu'est ce que le projet Eagle Eye ?</h2>
-            <div class="content-wrapper">
-                <img src="./asset/eagle3.png" alt="Projet Eagle Eye" class="content-image">
-                <div class="content-text">
-                    <p>
-                        Eagle Eye est un système de lunettes intelligentes et d'affichage en réalité mixte développé par Anduril Industries.
-                        Il a été officiellement annoncé le 13 octobre 2025, lors du salon AUSA 2025 (Association of the United States Army).
-                        Il fait partie d'une famille de modules portés par le soldat : lunettes, visière et casque, tous conçus pour offrir une vision augmentée du champ de bataille grâce à l'IA embarquée.
+  <div class="page-hero">
+    <div class="num">004</div>
+    <h1 class="page-title">
+      Veille<br>
+      <span class="light">technologique.</span>
+    </h1>
+  </div>
 
-                        L'objectif est de transformer un soldat classique en un opérateur augmenté, capable d'accéder en temps réel à des informations tactiques sans perdre sa vision du terrain.
-                    </p>
-                    <p>
-                        Grâce à des casques équipés de capteurs avancés et d'écrans à réalité augmentée, les militaires peuvent visualiser des données tactiques, identifier des cibles et coordonner leurs actions avec une précision sans précédent.
-                    </p>
-                </div>
-            </div>
+  <div class="veille-list">
 
-            <!-- Sections suivantes en pleine largeur -->
-            <div class="full-width-content">
-                <h2>2. Quels sont les objectifs du projet ?</h2>
-                <p>Le projet Eagle Eye a pour objectif de rendre l'intelligence artificielle accessible sous une forme à la fois portable, discrète et utilisable au quotidien. Il vise à permettre une analyse visuelle instantanée du monde réel directement depuis les lunettes, sans dépendre d'un appareil externe. Les lunettes sont capables de prendre en charge des fonctions avancées comme la traduction en temps réel, la reconnaissance d'objets, la lecture de texte, ainsi que le sous-titrage automatique de l'environnement. Un autre objectif clé est de garantir la confidentialité des données grâce à un fonctionnement entièrement en local, sans envoi systématique vers le cloud. Enfin, Eagle Eye cherche à démontrer qu'il est possible de miniaturiser une IA avancée dans un format aussi compact que des lunettes intelligentes.</p>
+    <a href="veille-iot.html" class="veille-item">
+      <div class="veille-num">01</div>
+      <img src="./asset/reseau.png" alt="IoT Cybersécurité" class="veille-thumb">
+      <div class="veille-info">
+        <div class="veille-tag">IoT · Cybersécurité · Vie privée · Réglementation</div>
+        <div class="veille-title">Objets connectés — Cybersécurité et vie privée</div>
+        <div class="veille-desc">Enjeux de sécurité et de protection des données dans l'IoT. OWASP IoT Top 10, RGPD, Cyber Resilience Act, NIS2 et solutions techniques.</div>
+      </div>
+      <div class="veille-arrow">→</div>
+    </a>
 
-                <h2>3. Comment fonctionne l'IA embarquée dans les lunettes Eagle Eye ?</h2>
-                <p>Les lunettes Eagle Eye intègrent une puce d'intelligence artificielle spécialisée, appelée NPU, capable d'exécuter des modèles de vision artificielle et de traitement du langage. Elles disposent également d'un stockage local permettant de conserver les modèles IA directement dans l'appareil, ainsi que de capteurs et d'une caméra qui fournissent les données visuelles à analyser. Les informations traitées sont ensuite affichées via un micro-écran intégré, sous forme de réalité augmentée. L'IA est spécifiquement optimisée pour fonctionner hors connexion grâce à des modèles compressés et spécialisés, capables d'assurer la reconnaissance visuelle, l'analyse de scènes, la compréhension vocale et la génération de réponses rapides sans accès à Internet.</p>
+  </div>
 
-                <h2>4. Quelles sont les implications éthiques et stratégiques de l'utilisation de l'IA dans le domaine militaire ?</h2>
-                <p>L'intelligence artificielle est principalement concentrée dans la branche droite des lunettes, où se trouvent la NPU et le CPU, la mémoire interne, la batterie principale, une carte mère miniaturisée ainsi qu'un microphone utilisé pour l'assistant vocal. La branche gauche accueille quant à elle des composants complémentaires comme une batterie secondaire, des antennes Bluetooth ou 4G et des capteurs inertiels tels que le gyroscope et l'accéléromètre. La partie frontale des lunettes intègre la caméra, le capteur de lumière ambiante et le projecteur responsable de l'affichage en réalité augmentée. En pratique, l'ensemble du traitement IA est regroupé dans un module électronique extrêmement compact situé majoritairement dans la branche droite.</p>
+  <footer>&copy; Portfolio — Celeste Ngola — 2026</footer>
 
-                <h2>5. Comment Eagle Eye fonctionne-t-il sans Wi-Fi ?</h2>
-                <p>Eagle Eye repose sur le principe de l'Edge AI, c'est-à-dire un traitement des données directement sur l'appareil. Tous les modèles d'intelligence artificielle sont chargés dans la mémoire interne des lunettes et exécutés localement par la puce NPU, sans nécessiter de requêtes vers le cloud pour les tâches visuelles et linguistiques de base. Cette approche permet un fonctionnement totalement hors ligne, une latence très faible, une meilleure protection des données personnelles et une autonomie complète, même sans smartphone. La connexion réseau n'est requise que de manière ponctuelle, par exemple pour mettre à jour les modèles IA ou pour une synchronisation facultative avec des services cloud.</p>
-
-                <h2>6. Quelles sont les fonctionnalités ?</h2>
-                <p>Les lunettes Eagle Eye offrent un ensemble de fonctionnalités avancées, notamment l'analyse visuelle en temps réel de l'environnement, la traduction instantanée de textes ou de conversations, ainsi que le sous-titrage du monde réel. Elles intègrent un assistant vocal capable de répondre aux demandes de l'utilisateur et proposent un affichage en réalité augmentée discret sous forme de flèches, de textes ou de symboles. Les lunettes permettent également l'analyse de documents, la reconnaissance d'objets et de texte, ainsi qu'une aide à la navigation et au repérage spatial, le tout dans un usage entièrement mains libres.</p>
-
-                <h2>7. Quels sont les enjeux technologiques ?</h2>
-                <p>Le développement d'Eagle Eye soulève plusieurs enjeux technologiques majeurs. Il s'agit avant tout de réussir la miniaturisation extrême d'une intelligence artificielle avancée dans un format aussi compact que des lunettes. La gestion de la chaleur générée par les composants, l'autonomie énergétique de l'appareil et la stabilisation de l'affichage en réalité augmentée sont également des défis importants. À cela s'ajoutent la nécessité d'assurer une reconnaissance visuelle fiable malgré les contraintes matérielles et de garantir la sécurité des données ainsi que le respect de la vie privée des utilisateurs.</p>
-
-                <h2>8. Quelles applications possibles ?</h2>
-                <p>Les applications potentielles d'Eagle Eye sont nombreuses et variées. Les lunettes peuvent servir d'outil d'assistance pour les personnes malvoyantes, faciliter l'apprentissage grâce à l'affichage contextuel d'informations ou offrir une traduction instantanée pour les voyageurs. Elles peuvent également améliorer la productivité professionnelle en aidant à la lecture, à l'analyse de documents et à la prise d'informations en temps réel. D'autres usages incluent la navigation et le guidage, les applications sportives ou techniques, ainsi que plus largement tous les scénarios nécessitant un accès à l'information en mode mains libres.</p>
-            </div>
-            
-            <div class="button-container">
-                <button class="button-default" type="button">En savoir plus</button>
-                <button class="button-default" type="button">Documentation</button>
-            </div>
-        </article>
-    </main>
-
-    <footer>
-        &copy; Portfolio - Celeste - <time datetime="2025">2025</time>
-    </footer>
-
-    <script src="./js/app.js"></script>
-    <script src="./js/header.js"></script>
-    <script src="./js/dark-mode.js"></script>
+  <script src="./js/header.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/dark-mode.js"></script>
 </body>
-
 </html>

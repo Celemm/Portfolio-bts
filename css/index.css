@@ -1,0 +1,116 @@
+/* =============================================
+   INDEX PAGE
+   ============================================= */
+
+/* Hero */
+.hero {
+  padding: 5rem 2rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  animation: slideUp .6s var(--ease) both;
+}
+
+/* ---- Hero Name (Celeste) ---- */
+.hero-name-block {
+  margin-bottom: 2rem;
+}
+
+.hero-name {
+  font-size: clamp(3.5rem, 9vw, 8rem);
+  font-weight: 800;
+  letter-spacing: -0.05em;
+  line-height: 1;
+  display: inline-block;
+  background: var(--gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+}
+
+.hero-name::after {
+  content: '';
+  display: block;
+  height: 4px;
+  width: 60%;
+  background: var(--gradient);
+  border-radius: 2px;
+  margin-top: 0.4rem;
+  opacity: 0.4;
+}
+
+/* Row description + infos */
+.row {
+  display: flex;
+  align-items: flex-start;
+  gap: 5rem;
+  padding: 3.5rem 2rem;
+  border-top: 1px solid var(--border);
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.row-sub {
+  font-size: 1rem;
+  line-height: 1.85;
+  color: var(--text-muted);
+  max-width: 320px;
+  flex-shrink: 0;
+}
+
+.row-list {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.row-list li {
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--text);
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+
+.row-list li span {
+  font-size: 0.7rem;
+  font-weight: 500;
+  color: var(--text-light);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+/* CTA */
+.cta {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  padding: 3.5rem 2rem 6rem;
+  border-top: 1px solid var(--border);
+  max-width: 1100px;
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.cta-text {
+  font-size: 1.6rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  color: var(--text);
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(24px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 768px) {
+  .hero-name { font-size: clamp(2.8rem, 12vw, 5rem); }
+  .row { flex-direction: column; gap: 2rem; padding: 2.5rem 1.5rem; }
+  .row-list { grid-template-columns: 1fr; }
+  .cta { padding: 2.5rem 1.5rem 4rem; }
+}

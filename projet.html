@@ -1,52 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portfolio de développement web de Celeste. Découvrez mes projets et compétences en développement.">
-    <title>Portfolio Développement</title>
-    <link rel="stylesheet" href="./css/main.css">
-    <link rel="stylesheet" href="./css/dark-mode.css">
-      <link rel="stylesheet" href="./css/header.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projets — Celeste Ngola</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/projet.css">
 </head>
-
 <body>
 
-    <main>
-        <section class="portfolio-images">
-            <ul>
-                <li>
-                    <figure>
-                       <img src="./asset/ProjetPerso.png" alt="Développement et langages">
-                        <figcaption><a href="">Projets personnels</a></figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="./asset/ProjetPro.svg" alt="Aperçu de projets réalisés">
-                        <figcaption><a href="">Projets professionnels</a></figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="./asset/ProjetSco.svg" alt="Réseau et cybersécurité">
-                        <figcaption><a href="projetSchool.html">Projets scolaires</a></figcaption>
-                    </figure>
-                </li>
-            </ul>
-        </section>
+  <div class="page-hero">
+    <div class="num">003</div>
+    <h1 class="page-title">
+      Mes projets<br>
+      <span class="light">réalisations.</span>
+    </h1>
+  </div>
 
-   
-    </main>
+  <div class="grid">
 
-    <footer>
-        &copy; Portfolio - Celeste - <time datetime="2025">2025</time>
-    </footer>
-    <script src="./js/app.js"></script>
-      <script src="./js/header.js"></script>
-      <script src="./js/dark-mode.js"></script>
+    <a href="dev.html" class="grid-item">
+      <img src="./asset/ProjetPerso.png" alt="Développement">
+      <div class="item-tag">Dev</div>
+      <div class="item-title">Développement</div>
+      <div class="item-desc">Jeux en Java, applications expérimentales et explorations créatives réalisées en dehors du cursus scolaire.</div>
+      <div class="item-link">Voir les projets →</div>
+    </a>
+
+    <a href="res.html" class="grid-item">
+      <img src="./asset/reseau.png" alt="Réseau">
+      <div class="item-tag">Réseau</div>
+      <div class="item-title">Réseau</div>
+      <div class="item-desc">Travaux pratiques réseau : routage Mikrotik, services DHCP et configuration d'infrastructures.</div>
+      <div class="item-link">Voir les projets →</div>
+    </a>
+
+    <a href="projetsScolaires.html" class="grid-item">
+      <img src="./asset/ProjetSco.svg" alt="Projets scolaires">
+      <div class="item-tag">Scolaire</div>
+      <div class="item-title">Projets scolaires</div>
+      <div class="item-desc">Projets réalisés dans le cadre du BTS SIO SLAM — Skystorm, Personnel M2L et autres réalisations académiques.</div>
+      <div class="item-link">Voir les projets →</div>
+    </a>
+
+  </div>
+
+  <footer>&copy; Portfolio — Celeste Ngola — 2026</footer>
+
+  <script src="./js/header.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/dark-mode.js"></script>
 </body>
-
 </html>

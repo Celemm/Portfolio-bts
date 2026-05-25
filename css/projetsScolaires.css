@@ -1,0 +1,200 @@
+/* =============================================
+   PROJETS SCOLAIRES PAGE
+   ============================================= */
+
+.hero-sub {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: var(--text-muted);
+  max-width: 520px;
+  margin-top: 1.5rem;
+}
+
+/* ---- Grid ---- */
+.sco-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  padding: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  border-top: 1px solid var(--border);
+}
+
+/* ---- Card ---- */
+.sco-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border);
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+  transition: transform var(--dur) var(--ease),
+              box-shadow var(--dur) var(--ease),
+              border-color var(--dur) var(--ease);
+}
+
+.sco-card:hover {
+  transform: translateY(-6px);
+  box-shadow: var(--shadow-lg), var(--shadow-accent);
+  border-color: var(--accent);
+}
+
+/* ---- Card header (couleur) ---- */
+.sco-card-header {
+  position: relative;
+  padding: 1.5rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 160px;
+  background: transparent;
+  overflow: hidden;
+}
+
+.sco-header-sky,
+.sco-header-m2l {
+  background: transparent;
+}
+
+.sco-card-logo {
+  height: 130px;
+  width: auto;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  transition: transform var(--dur) var(--ease);
+}
+
+body.dark-mode .sco-card-logo {
+  mix-blend-mode: normal;
+  filter: brightness(0) invert(1);
+}
+
+.sco-card:hover .sco-card-logo {
+  transform: scale(1.06);
+}
+
+.sco-card-num {
+  font-size: 4rem;
+  font-weight: 800;
+  color: rgba(0,0,0,0.07);
+  letter-spacing: -0.04em;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+}
+
+body.dark-mode .sco-card-num {
+  color: rgba(255,255,255,0.12);
+}
+
+/* ---- Card body ---- */
+.sco-card-body {
+  padding: 1.75rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  flex: 1;
+}
+
+/* ---- Tags ---- */
+.sco-card-tags {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: wrap;
+}
+
+.sco-tag {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 0.2rem 0.6rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid transparent;
+}
+
+.sco-tag-php     { background: rgba(119,123,180,.12); color: #7779B4; border-color: rgba(119,123,180,.25); }
+.sco-tag-laravel { background: rgba(255,45,85,.1);    color: #FF3B5C; border-color: rgba(255,45,85,.2); }
+.sco-tag-mysql   { background: rgba(0,117,143,.1);    color: #00758F; border-color: rgba(0,117,143,.2); }
+.sco-tag-java    { background: rgba(234,84,21,.1);    color: #EA5415; border-color: rgba(234,84,21,.2); }
+.sco-tag-arch    { background: rgba(155,89,245,.1);   color: var(--accent); border-color: rgba(155,89,245,.2); }
+
+/* ---- Title / subtitle ---- */
+.sco-card-title {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: var(--text);
+  letter-spacing: -0.02em;
+  line-height: 1.2;
+}
+
+.sco-card-subtitle {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.sco-card-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.75;
+  flex: 1;
+}
+
+/* ---- Footer ---- */
+.sco-card-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.sco-card-meta {
+  display: flex;
+  gap: 0.75rem;
+  flex-wrap: wrap;
+}
+
+.sco-meta-item {
+  font-size: 0.75rem;
+  color: var(--text-light);
+  font-weight: 500;
+}
+
+.sco-card-cta {
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent);
+  transition: gap var(--dur-fast) var(--ease), color var(--dur-fast) var(--ease);
+  white-space: nowrap;
+}
+
+.sco-card:hover .sco-card-cta {
+  color: var(--accent-dark);
+}
+
+/* ---- Back section ---- */
+.back-section {
+  padding: 3rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ---- Responsive ---- */
+@media (max-width: 768px) {
+  .sco-grid {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+}
