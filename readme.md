@@ -15,6 +15,8 @@ Ce portfolio a été conçu pour mettre en avant mes projets, mes compétences e
 - Page d'accueil avec une présentation
 - Galerie de projets
 - Liens vers mon CV et mon GitHub
+- Page de contact
+- Veille Technologique
 - Interface responsive
 
 ## 📁 Structure du projet

@@ -1,73 +1,52 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Portfolio de développement web de Celeste. Découvrez mes projets et compétences en développement.">
-    <title>Portfolio Développement</title>
-    <link rel="stylesheet" href="./css/main.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfolio — Celeste Ngola</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/index.css">
 </head>
-
 <body>
-    <header>
-        <h1>Portfolio Développement</h1>
-        <nav>
-            <ul>
-                <li><a href="#" class="nav-link">Accueil</a></li>
-                <li><a href="#" class="nav-link">Profil</a></li>
-                <li><a href="#" class="nav-link">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="portfolio-images">
-            <ul>
-                <li>
-                    <figure>
-                        <img src="./asset/cover3.png" alt="Développement et langages">
-                        <figcaption><a href="#">Développement</a></figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="./asset/cover5.png" alt="Aperçu de projets réalisés">
-                        <figcaption><a href="#">Projets</a></figcaption>
-                    </figure>
-                </li>
-                <li>
-                    <figure>
-                        <img src="./asset/undraw_programming_65t2.png" alt="Réseau et cybersécurité">
-                        <figcaption><a href="#">Réseau</a></figcaption>
-                    </figure>
-                </li>
-            </ul>
-        </section>
+  <!-- HERO -->
+  <div class="hero">
+    <div class="num">001</div>
+    <div class="hero-name-block">
+      <span class="hero-name">Celeste Ngola</span>
+    </div>
+    <h1 class="page-title">
+      Étudiant<br>
+      <span class="light">développeur.</span>
+    </h1>
+  </div>
 
-        <article class="fade-in-section">
-            <h2>Plus d'infos sur mon travail</h2>
-            <p>
-                Salut, moi c’est <strong>Gloire Céleste Ngola</strong>.<br>
-                Je suis actuellement étudiant à <strong>ITIC Paris</strong> en première année de <strong>BTS SIO</strong>,
-                option <strong>SLAM</strong>, spécialisée dans le développement. <br>
-                Je suis encore en cours d’apprentissage et je vous propose ce portfolio
-                où vous trouverez mes différentes études et projets que j’ai entrepris
-                dans ma carrière.<br>
-                Vous trouverez ci-dessous mon <strong>CV</strong> ainsi que le lien vers mon <strong>GitHub</strong>.
-            </p>
-            <div class="button-container">
-                <button class="button-default button-theme-infos" type="button">Mon CV</button>
-                <button class="button-default button-theme-info" type="button">GitHub</button>
-            </div>
-        </article>
-    </main>
+  <!-- Rangée description + infos -->
+  <div class="row">
+    <p class="row-sub">
+      BTS SIO option SLAM à l'ITIC Paris.
+      Je développe des applications mobiles Android et des solutions web.
+      En veille constante sur l'IA générative et l'Internet des Objets.
+    </p>
+    <ul class="row-list">
+      <li><span>Projet phare</span>ITIC Companion</li>
+      <li><span>Formation</span>BTS SIO SLAM</li>
+      <li><span>Spécialité</span>Dev Android / Java</li>
+      <li><span>Veille</span>IA générative &amp; IoT</li>
+    </ul>
+  </div>
 
-    <footer>
-        &copy; Portfolio - Celeste - <time datetime="2025">2025</time>
-    </footer>
-    <script src="./js/app.js"></script>
+  <!-- CTA -->
+  <div class="cta">
+    <div class="cta-text">Voir le portfolio</div>
+    <a href="projet.html" class="btn">Projets →</a>
+    <a href="contact.html" class="btn">Contact →</a>
+  </div>
+
+  <footer>&copy; Portfolio — Celeste Ngola — 2026</footer>
+
+  <script src="./js/header.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/dark-mode.js"></script>
 </body>
-
 </html>

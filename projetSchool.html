@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Personnel M2L — Celeste Ngola</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/projetSchool.css">
+</head>
+<body>
+
+  <!-- Fil d'ariane -->
+  <div class="breadcrumb">
+    <a href="index.html">Accueil</a>
+    <span>/</span>
+    <a href="projet.html">Projets</a>
+    <span>/</span>
+    <a href="projetsScolaires.html">Scolaires</a>
+    <span>/</span>
+    <span>Personnel M2L</span>
+  </div>
+
+  <!-- Titre -->
+  <div class="detail-title">
+    <h1>Personnel — Gestionnaire d'employés M2L</h1>
+    <div class="tags">
+      <span class="tag">Java</span>
+      <span class="tag">MySQL</span>
+      <span class="tag">Architecture 3-tiers</span>
+      <span class="tag">Scolaire</span>
+    </div>
+    <div class="detail-btns">
+      <a href="https://github.com/Tinx242/Personnel" target="_blank" class="btn">📂 Code source</a>
+      <a href="https://enseignement.alexandre-mesle.com/PPE/personnel/javadoc/personnel/package-summary.html" target="_blank" class="btn">📄 Documentation</a>
+    </div>
+  </div>
+
+  <!-- Contexte -->
+  <div class="block">
+    <div class="block-label">Contexte</div>
+    <div class="block-body">
+      <p>Ce projet a été réalisé dans le cadre de la gestion des employés de la Maison des Ligues de Lorraine (M2L). L'objectif était de transformer une application mono-utilisateur en ligne de commande en un système multi-utilisateurs avec différents niveaux d'habilitation.</p>
+    </div>
+  </div>
+
+  <!-- Ressources -->
+  <div class="block">
+    <div class="block-label">Ressources<br>fournies</div>
+    <div class="block-body">
+      <ul>
+        <li><strong>Code source initial</strong> — Application Java configurée pour Eclipse avec architecture 3-tiers</li>
+        <li><strong>Documentation</strong> — Spécifications techniques et fonctionnelles</li>
+        <li><strong>Bibliothèque CLI</strong> — Outil de dialogue en ligne de commande</li>
+        <li><strong>Architecture existante</strong> — Structure 3-tiers à conserver (Présentation, Métier, Données)</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Réalisations -->
+  <div class="block">
+    <div class="block-label">Réalisations</div>
+    <div class="block-body">
+      <h4>1. Migration vers une base de données MySQL</h4>
+      <p>Transformation de l'application mono-utilisateur en système multi-utilisateurs grâce à une base de données relationnelle. Gestion simultanée de plusieurs utilisateurs et persistance des données.</p>
+      <h4>2. Système d'authentification et d'habilitation</h4>
+      <ul>
+        <li><strong>Employé simple</strong> — accès en lecture seule (annuaire)</li>
+        <li><strong>Administrateur de ligue</strong> — gestion des employés de sa ligue via application bureau</li>
+        <li><strong>Super-administrateur</strong> — accès total + gestion des comptes administrateurs via CLI</li>
+      </ul>
+      <h4>3. Respect de l'architecture 3-tiers</h4>
+      <p>Conservation et amélioration de l'architecture existante en séparant clairement les couches Présentation, Métier et Accès aux données.</p>
+    </div>
+  </div>
+
+  <!-- Captures d'écran -->
+  <div class="block">
+    <div class="block-label">Captures<br>d'écran</div>
+    <div class="block-body">
+      <div class="screenshots">
+        <figure>
+          <img src="./asset/interfaceConnexion.png" alt="Interface de connexion" onerror="this.style.display='none'">
+          <figcaption>Interface de connexion</figcaption>
+        </figure>
+        <figure>
+          <img src="./asset/StructureProjet.png" alt="Structure du projet" onerror="this.style.display='none'">
+          <figcaption>Structure du projet</figcaption>
+        </figure>
+        <figure>
+          <img src="./asset/GestionEmploye.png" alt="Gestion des employés" onerror="this.style.display='none'">
+          <figcaption>Gestion des employés</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <!-- MCD -->
+  <div class="block">
+    <div class="block-label">Modèle de<br>données</div>
+    <div class="block-body">
+      <img src="./asset/mcd.png" alt="MCD" style="max-width: 100%; margin-bottom: 16px;" onerror="this.style.display='none'">
+      <ul>
+        <li><strong>EMPLOYE</strong> — informations détaillées + niveaux d'habilitation</li>
+        <li><strong>LIGUE</strong> — organisation des ligues sportives</li>
+      </ul>
+    </div>
+  </div>
+
+  <!-- Technologies -->
+  <div class="block">
+    <div class="block-label">Technologies</div>
+    <div class="block-body">
+      <div class="tech-grid">
+        <div class="tech-cell">
+          <img src="./asset/java.png" alt="Java">
+          <h4>Java</h4>
+          <p>Langage principal pour la logique métier et l'architecture 3-tiers.</p>
+        </div>
+        <div class="tech-cell">
+          <img src="./asset/mysql-original.svg" alt="MySQL">
+          <h4>MySQL</h4>
+          <p>Base de données relationnelle pour la persistance multi-utilisateurs.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Défis -->
+  <div class="block">
+    <div class="block-label">Défis relevés</div>
+    <div class="block-body">
+      <ul>
+        <li>Migration mono-utilisateur vers multi-utilisateurs</li>
+        <li>Implémentation d'un système de permissions granulaire</li>
+        <li>Respect strict de l'architecture 3-tiers existante</li>
+        <li>Gestion de la sécurité et de l'authentification</li>
+        <li>Compatibilité entre interface CLI et interface bureau</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="back-nav">
+    <a href="projet.html" class="btn">← Retour aux projets</a>
+  </div>
+
+  <footer>&copy; Portfolio — Celeste Ngola — 2026</footer>
+
+  <script src="./js/header.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/dark-mode.js"></script>
+</body>
+</html>

@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pokémon — Celeste Ngola</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/projetSchool.css">
+</head>
+<body>
+
+  <div class="breadcrumb">
+    <a href="index.html">Accueil</a>
+    <span>/</span>
+    <a href="projet.html">Projets</a>
+    <span>/</span>
+    <a href="dev.html">Développement</a>
+    <span>/</span>
+    <span>Pokémon</span>
+  </div>
+
+  <div class="detail-title">
+    <h1>Pokémon — Jeu de combat en terminal</h1>
+    <div class="tags">
+      <span class="tag">Java</span>
+      <span class="tag">POO</span>
+      <span class="tag">Héritage</span>
+      <span class="tag">Enum</span>
+      <span class="tag">Terminal</span>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Contexte</div>
+    <div class="block-body">
+      <p>Jeu Pokémon backend développé entièrement en Java et jouable dans le terminal. Le joueur crée son Pokémon en choisissant son type, son nom et ses stats, puis le fait combattre contre un adversaire. Le projet met en pratique l'héritage, les enums et le polymorphisme en Java.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Fonctionnement</div>
+    <div class="block-body">
+      <h4>1. Création du Pokémon</h4>
+      <p>Le joueur choisit parmi 4 types disponibles (Eau, Feu, Plante, Électrique), saisit un nom et les statistiques de base : vie, puissance, attaque. Chaque type instancie la sous-classe correspondante.</p>
+      <h4>2. Système de combat</h4>
+      <p>Le Pokémon du joueur affronte un adversaire généré automatiquement. Les dégâts infligés tiennent compte du type — certains types sont super-efficaces contre d'autres, comme dans le jeu original.</p>
+      <h4>3. Affichage des résultats</h4>
+      <p>Le terminal affiche le déroulement du combat tour par tour, les points de vie restants et le vainqueur final.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Architecture</div>
+    <div class="block-body">
+      <h4>Héritage et types</h4>
+      <ul>
+        <li><strong>Pokemon</strong> — classe parente avec attributs communs : vie, puissance, nom, atk, type</li>
+        <li><strong>PokemonEau</strong> — hérite de Pokemon, bonus contre Feu</li>
+        <li><strong>PokemonFeu</strong> — hérite de Pokemon, bonus contre Plante</li>
+        <li><strong>PokemonPlante</strong> — hérite de Pokemon, bonus contre Eau</li>
+        <li><strong>PokemonElectric</strong> — hérite de Pokemon, bonus contre Eau</li>
+        <li><strong>TypePokemon</strong> — enum des 4 types disponibles</li>
+        <li><strong>Application</strong> — classe principale, menu et logique de combat</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Captures<br>d'écran</div>
+    <div class="block-body">
+      <div class="screenshots">
+        <figure>
+          <img src="./asset/pokemon-code.png" alt="Classe Pokemon">
+          <figcaption>Classe Pokemon — attributs, constructeurs et getters/setters</figcaption>
+        </figure>
+        <figure>
+          <img src="./asset/pokemon-structure.png" alt="Structure du projet">
+          <figcaption>Structure du projet Eclipse</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Technologies</div>
+    <div class="block-body">
+      <div class="tech-grid">
+        <div class="tech-cell">
+          <img src="./asset/java.png" alt="Java">
+          <h4>Java</h4>
+          <p>Langage unique — héritage, enum, polymorphisme et saisie utilisateur en terminal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Concepts clés</div>
+    <div class="block-body">
+      <ul>
+        <li>Héritage multi-niveaux avec classe parente <code>Pokemon</code></li>
+        <li>Enum <code>TypePokemon</code> pour typer les instances</li>
+        <li>Polymorphisme pour le calcul des dégâts selon le type</li>
+        <li>Encapsulation complète avec getters et setters</li>
+        <li>Logique de combat avec gestion des points de vie</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="back-nav">
+    <a href="dev.html" class="btn">← Retour aux projets</a>
+  </div>
+
+  <footer>&copy; Portfolio — Celeste Ngola — 2026</footer>
+
+  <script src="./js/header.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/dark-mode.js"></script>
+</body>
+</html>

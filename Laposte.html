@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>La Poste — Celeste Ngola</title>
+  <link rel="stylesheet" href="./css/main.css">
+  <link rel="stylesheet" href="./css/projetSchool.css">
+</head>
+<body>
+
+  <div class="breadcrumb">
+    <a href="index.html">Accueil</a>
+    <span>/</span>
+    <a href="projet.html">Projets</a>
+    <span>/</span>
+    <a href="dev.html">Développement</a>
+    <span>/</span>
+    <span>La Poste</span>
+  </div>
+
+  <div class="detail-title">
+    <h1>La Poste — Système de livraison</h1>
+    <div class="tags">
+      <span class="tag">Java</span>
+      <span class="tag">POO</span>
+      <span class="tag">Héritage</span>
+      <span class="tag">Terminal</span>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Contexte</div>
+    <div class="block-body">
+      <p>Simulation du système informatique de livraison de La Poste, entièrement en Java. Le programme permet de gérer une boîte aux lettres contenant différents types d'objets postaux — colis et lettres — avec calcul automatique du prix d'affranchissement, le tout fonctionnel en terminal.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Fonctionnement</div>
+    <div class="block-body">
+      <h4>1. Création des objets postaux</h4>
+      <p>L'utilisateur remplit une boîte aux lettres de 4 emplacements. Pour chaque emplacement, il choisit de créer un colis ou une lettre, ou laisse l'emplacement vide. Le programme valide le choix et instancie l'objet correspondant.</p>
+      <h4>2. Affichage du contenu</h4>
+      <p>Une fois la boîte remplie, le programme parcourt tous les objets et affiche leurs détails via la méthode <code>toString()</code> surchargée de chaque classe.</p>
+      <h4>3. Calcul du prix d'affranchissement</h4>
+      <p>Chaque type d'objet postal implémente sa propre méthode de calcul : <code>prixAffs()</code> pour les colis (selon le poids) et <code>prixAff()</code> pour les lettres (selon le format). Le polymorphisme permet d'appeler la bonne méthode avec <code>instanceof</code>.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Architecture</div>
+    <div class="block-body">
+      <h4>Héritage et polymorphisme</h4>
+      <ul>
+        <li><strong>ObjetPostal</strong> — classe abstraite parente, attributs communs (destinataire, expéditeur, poids)</li>
+        <li><strong>Colis</strong> — hérite d'ObjetPostal, ajoute les dimensions, implémente <code>prixAffs()</code></li>
+        <li><strong>Lettres</strong> — hérite d'ObjetPostal, ajoute le format, implémente <code>prixAff()</code></li>
+        <li><strong>App</strong> — classe principale, gère le menu et la boucle de saisie</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Captures<br>d'écran</div>
+    <div class="block-body">
+      <div class="screenshots">
+        <figure>
+          <img src="./asset/Laposte-code.png" alt="Code principal App.java">
+          <figcaption>Classe App — boucle principale et switch de saisie</figcaption>
+        </figure>
+        <figure>
+          <img src="./asset/Laposte-structure.png" alt="Structure du projet">
+          <figcaption>Structure du projet Eclipse</figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Technologies</div>
+    <div class="block-body">
+      <div class="tech-grid">
+        <div class="tech-cell">
+          <img src="./asset/java.png" alt="Java">
+          <h4>Java</h4>
+          <p>Langage unique du projet — POO, héritage, polymorphisme et gestion des entrées utilisateur.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="block">
+    <div class="block-label">Concepts clés</div>
+    <div class="block-body">
+      <ul>
+        <li>Héritage avec classe abstraite parente <code>ObjetPostal</code></li>
+        <li>Polymorphisme via <code>instanceof</code> et surcharge de méthodes</li>
+        <li>Lecture des entrées utilisateur avec <code>BufferedReader</code></li>
+        <li>Tableau d'objets polymorphiques <code>ObjetPostal[]</code></li>
+        <li>Surcharge de <code>toString()</code> dans chaque sous-classe</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="back-nav">
+    <a href="dev.html" class="btn">← Retour aux projets</a>
+  </div>
+
+  <footer>&copy; Portfolio — Celeste Ngola — 2026</footer>
+
+  <script src="./js/header.js"></script>
+  <script src="./js/app.js"></script>
+  <script src="./js/dark-mode.js"></script>
+</body>
+</html>
